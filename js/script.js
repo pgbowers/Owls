@@ -1,4 +1,4 @@
-let firstGuess = '';
+var firstGuess = '';
 let secondGuess = '';
 let count = 0;
 let matches = 0;
@@ -193,7 +193,7 @@ const initialize = () => {
     grid.addEventListener('click', event => {
 
         const newClick = event.target;
-        // get the name of the horse clicked
+        // get the name of the owl clicked
         var modal_name = newClick.parentNode.dataset.name;
         // get the description
         var modal_desc = newClick.parentNode.dataset.desc;
@@ -210,7 +210,7 @@ const initialize = () => {
             myImage.src = modal_img;
 
             //Show the image
-            test4 = document.getElementById('horse_image');
+            test4 = document.getElementById('owl_image');
             test4.appendChild(myImage);
 
             //Show the description
