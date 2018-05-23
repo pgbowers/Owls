@@ -71,7 +71,8 @@ body {
 
 #playGame-button,
 #playAgain-button,
-#gameOver-button {
+#gameOver-button,
+#listenButton {
     width: 150px;
     margin: auto;
     margin-bottom: 20px;
