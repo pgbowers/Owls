@@ -20,7 +20,7 @@ const cardsArray = [{
         'name': 'Barn',
         'desc': 'The Barn owl is the most common owl in the world. They only fly at night and they eat mostly mice which they can hear moving in the dark. Barn owls can live for 17 years.',
         'img': 'img/barn.jpg',
-        'sound': 'img/barred.mp3',
+        'sound': 'img/barn.mp3',
   },
     {
         'name': 'Barred',
@@ -32,19 +32,19 @@ const cardsArray = [{
         'name': 'Boreal',
         'desc': 'The Boreal owl lives in northern Canada and builds its nest in old woodpecker holes. They only fly at night and roost in thick cover during the day. Boreal owls can live to be 15 years old.',
         'img': 'img/boreal.jpg',
-        'sound': 'img/barred.mp3',
+        'sound': 'img/boreal.mp3',
   },
     {
         'name': 'Burrowing',
         'desc': 'The Burrowing owl lives in the prairies of Western Canada. They are about the size of a robin and build their nests in holes in the ground. They eat mainly mice and grasshoppers and can live to 11 years of age.',
         'img': 'img/burrowing.jpg',
-        'sound': 'img/barred.mp3',
+        'sound': 'img/burrowing.mp3',
   },
     {
         'name': 'Great Gray',
         'desc': 'The Great Grey owl is the largest owl in Canada with a wingspan of over 4 feet. They hunt mostly at night but can be active during the day. They are very secretive and are rarely seen. The Great Grey owl is the provincial bird of Manitoba.',
         'img': 'img/greatgray.jpg',
-        'sound': 'img/barred.mp3',
+        'sound': 'img/greatgray.mp3',
   },
     {
         'name': 'Great Horned',
@@ -56,13 +56,13 @@ const cardsArray = [{
         'name': 'Hawk Owl',
         'desc': 'The Hawk owl lives in northern and central Canada and is active during the day. This owl is very tame and people can often approach one closely. They sometimes follow farmers making hay and pounce on mice that are uncovered.',
         'img': 'img/hawk.jpg',
-        'sound': 'img/barred.mp3',
+        'sound': 'img/hawk.mp3',
   },
     {
         'name': 'Longeared',
         'desc': 'The Long-eared owl is found across southern Canada and is about the size of a crow. They live in dense forests and only fly at night. They have long black tufts which look like big ears. The Long-eared owl can live up to 27 years.',
         'img': 'img/longeared.jpg',
-        'sound': 'img/barred.mp3',
+        'sound': 'img/longeared.mp3',
   },
     {
         'name': 'Saw Whet',
@@ -74,19 +74,19 @@ const cardsArray = [{
         'name': 'Short Eared',
         'desc': 'The Short-eared owl lives across Canada in open grassland areas. They are about the size of a crow but have very long wings. They roost on the ground and can often be seen during the daytime. They fly low over the ground looking for mice and other small animals.',
         'img': 'img/shorteared.jpg',
-        'sound': 'img/barred.mp3',
+        'sound': 'img/shorteared.mp3',
   },
     {
         'name': 'Snowy',
         'desc': 'The Snowy owl is almost all white and is the heaviest owl in Canada.They have a wingspan of up to 52 inches. They build a shallow nest on the ground and line it with feathers. Snowy owls can fly at up to 80 kilometers per hour and can live up to 14 years. The Snowy owl is the provincial bird of Quebec.',
         'img': 'img/snowy.jpg',
-        'sound': 'img/barred.mp3',
+        'sound': 'img/snowy.mp3',
   },
     {
         'name': 'Spotted',
         'desc': 'The Spotted owl lives in the dense forests of British Columbia and only comes out at night. Pairs of Spotted owls mate for life and their eggs are laid on the bare floor of holes in big trees. Spotted owls have large round heads with dark eyes and spots all over their back and head.',
         'img': 'img/spotted.jpg',
-        'sound': 'img/barred.mp3',
+        'sound': 'img/spotted.mp3',
   },
    ];
 //Random generator
