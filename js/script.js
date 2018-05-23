@@ -32,7 +32,7 @@ const cardsArray = [{
   },
     {
         'name': 'Burrowing',
-        'desc': 'The Burrowing owl lives in the prairies in Western Canada. They are about the size of a robin and build their nests in holes in the ground. They eat mainly mice and grasshoppers and can live to 11 years of age.',
+        'desc': 'The Burrowing owl lives in the prairies of Western Canada. They are about the size of a robin and build their nests in holes in the ground. They eat mainly mice and grasshoppers and can live to 11 years of age.',
         'img': 'img/burrowing.jpg',
   },
     {
