@@ -14,6 +14,7 @@ var gameGrid = [];
 var playGameButton = document.getElementById("playGame-button");
 var gameOverButton = document.getElementById("gameOver-button");
 var playAgainButton = document.getElementById("playAgain-button");
+var listenButton = document.getElementById("listenButton");
 
 const cardsArray = [{
         'name': 'Barn',
@@ -81,7 +82,7 @@ const cardsArray = [{
         'img': 'img/snowy.jpg',
         'sound': 'img/barred.mp3',
   },
-                    {
+    {
         'name': 'Spotted',
         'desc': 'The Spotted owl lives in the dense forests of British Columbia and only comes out at night. Pairs of Spotted owls mate for life and their eggs are laid on the bare floor of holes in big trees. Spotted owls have large round heads with dark eyes and spots all over their back and head.',
         'img': 'img/spotted.jpg',
@@ -232,8 +233,14 @@ const initialize = () => {
             //Show the description
             document.getElementById('modal2').textContent = modal_desc;
 
-            //Play the sound
-            document.getElementById('modal2').play = modal_sound;
+            // play the owl's sound
+            const playSound = () => {
+                var audio = new Audio(modal_sound);
+                audio.play();
+                listenButton.removeEventListener("click", playSound);
+            }
+            listenButton.addEventListener("click", playSound);
+
         };
     });
 };
@@ -254,6 +261,8 @@ window.onclick = function (event) {
         clearModal();
     }
 }
+
+
 
 const clearModal = () => {
     modal.style.display = "none";
