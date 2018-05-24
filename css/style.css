@@ -5,7 +5,7 @@
 }
 
 body {
-    margin: 20px 0;
+    margin: 0, auto;
     background: #f5cfdf;
 }
 
@@ -58,16 +58,9 @@ body {
 }
 
 /* matched cards will now remain visible */
-
 .match {
     transform: rotateY(180deg);
 }
-
-/* removed .match so that matched image remains visible */
-
-/*.front {
-    background: #6589F9 !important;
-}*/
 
 #playGame-button,
 #playAgain-button,
@@ -76,7 +69,6 @@ body {
     width: 150px;
     margin: auto;
     margin-bottom: 20px;
-    ;
     background-color: #d84679;
     border: 5px solid #dadfe3;
     border-radius: 20px;
@@ -84,7 +76,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: flex-inline;
-    font-family: 'Comic Sans MS', 'Times New Roman', Times, serif;
+    font-family: 'McLaren', cursive;
     font-size: 24px;
 }
 
@@ -92,18 +84,21 @@ body {
     display: none;
 }
 
+h2, h3{
+    color:#ad0028;
+}
+
 #gameStart-screen {
     max-width: 960px;
-    max-height: 600px;
-    margin: auto;
+    margin: 0, auto;
     margin-left: 10px;
     margin-right: 10px;
     background-color: #d8869f;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    font-family: 'Comic Sans MS', 'Times New Roman', Times, serif;
-    font-size: 32px;
+    font-family: 'McLaren', cursive;
+    font-size: 24px;
     color: antiquewhite;
     text-align: center;
     border: 5px solid #dadfe3;
@@ -119,22 +114,13 @@ body {
     display: none;
     flex-flow: column wrap;
     justify-content: center;
-    font-family: 'Comic Sans MS', 'Times New Roman', Times, serif;
+    font-family: 'McLaren', cursive;
     font-size: 32px;
     color: antiquewhite;
     text-align: center;
     border: 5px solid #dadfe3;
     border-radius: 20px;
 }
-
-/*#score {
-    position: absolute;
-    margin: auto;
-    text-align: center;
-    font-size: 20px;
-
-}*/
-
 /* The Modal (background) */
 
 .modal {
@@ -172,35 +158,20 @@ body {
     width: 80%;
     /* Could be more or less, depending on screen size */
     height: 80%;
-
     /* enable scrolling if needed*/
     overflow: auto;
 }
 
 #modal-content img {
-    /*display: flex;*/
-
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-
-    /*margin: auto;*/
-
 }
 
 #modal2 {
-    font-family: 'Comic Sans MS', 'Times New Roman', Times, serif;
+    font-family: 'McLaren', cursive;
     font-size: 22px;
-
 }
 
-/*#owl_image {
-    display: flex;
-    max-width: 300px;
-    max-height: 300px;
-   /* overflow: hidden;*/
 
-}
-
-*/

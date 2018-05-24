@@ -7,7 +7,7 @@ let delay = 1200;
 let test4 = '';
 
 let myImage = '';
-
+let modal_sound = "";
 var gameGrid = [];
 
 //Some variables to hold the buttons
@@ -215,7 +215,7 @@ const initialize = () => {
         //get the image
         var modal_img = newClick.parentNode.dataset.img;
         //get the sound
-        var modal_sound = newClick.parentNode.dataset.sound;
+        modal_sound = newClick.parentNode.dataset.sound;
 
         // clicking allowed only on matched pairs
         if (newClick.parentNode.classList.contains('match')) {
@@ -233,12 +233,6 @@ const initialize = () => {
             //Show the description
             document.getElementById('modal2').textContent = modal_desc;
 
-            // play the owl's sound
-            const playSound = () => {
-                var audio = new Audio(modal_sound);
-                audio.play();
-                listenButton.removeEventListener("click", playSound);
-            }
             listenButton.addEventListener("click", playSound);
 
         };
@@ -261,12 +255,17 @@ window.onclick = function (event) {
         clearModal();
     }
 }
-
+// play the owl's sound
+const playSound = () => {
+    var audio = new Audio(modal_sound);
+    audio.play();
+}
 
 
 const clearModal = () => {
     modal.style.display = "none";
     test4.removeChild(myImage);
+    listenButton.removeEventListener("click", playSound);
 }
 
 const gameOver = () => {
