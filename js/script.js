@@ -8,6 +8,9 @@ let test4 = '';
 
 let myImage = '';
 let modal_sound = "";
+let modal_img = "";
+let modal_desc = "";
+let audio = '';
 var gameGrid = [];
 
 //Some variables to hold the buttons
@@ -194,14 +197,18 @@ const initialize = () => {
             if (firstGuess && secondGuess) {
                 if (firstGuess === secondGuess) {
                     matches++;
+                    //display the info window after each match
+                    setTimeout(infoDisplay, delay);
                     setTimeout(match, delay);
                 }
                 setTimeout(resetGuesses, delay);
             }
         }
-        if (matches === 6) {
-            setTimeout(gameOver, delay);
-        }
+
+        //moved to clearModal function
+//        if (matches === 6) {
+//            setTimeout(gameOver, delay);
+//        }
     });
 
     // function for image zoom and info
@@ -211,29 +218,15 @@ const initialize = () => {
         // get the name of the owl clicked
         var modal_name = newClick.parentNode.dataset.name;
         // get the description
-        var modal_desc = newClick.parentNode.dataset.desc;
+        modal_desc = newClick.parentNode.dataset.desc;
         //get the image
-        var modal_img = newClick.parentNode.dataset.img;
+        modal_img = newClick.parentNode.dataset.img;
         //get the sound
         modal_sound = newClick.parentNode.dataset.sound;
 
         // clicking allowed only on matched pairs
         if (newClick.parentNode.classList.contains('match')) {
-            // make the modal window visible
-            modal.style.display = "flex";
-
-            // write to the modal window
-            myImage = new Image();
-            myImage.src = modal_img;
-
-            //Show the image
-            test4 = document.getElementById('owl_image');
-            test4.appendChild(myImage);
-
-            //Show the description
-            document.getElementById('modal2').textContent = modal_desc;
-
-            listenButton.addEventListener("click", playSound);
+            infoDisplay();
 
         };
     });
@@ -257,8 +250,31 @@ window.onclick = function (event) {
 }
 // play the owl's sound
 const playSound = () => {
-    var audio = new Audio(modal_sound);
+    audio = new Audio(modal_sound);
     audio.play();
+}
+
+const pauseSound = () => {
+    audio.pause();
+}
+
+const infoDisplay = () => {
+    // make the modal window visible
+            modal.style.display = "flex";
+
+            // write to the modal window
+            myImage = new Image();
+            myImage.src = modal_img;
+
+            //Show the image
+            test4 = document.getElementById('owl_image');
+            test4.appendChild(myImage);
+
+            //Show the description
+            document.getElementById('modal2').textContent = modal_desc;
+
+            listenButton.addEventListener("click", playSound);
+
 }
 
 
@@ -266,6 +282,11 @@ const clearModal = () => {
     modal.style.display = "none";
     test4.removeChild(myImage);
     listenButton.removeEventListener("click", playSound);
+    if (matches === 6) {
+            setTimeout(gameOver, delay);
+        }
+    //stop the sound when the window closes early
+    pauseSound();
 }
 
 const gameOver = () => {
